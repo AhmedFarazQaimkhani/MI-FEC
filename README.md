@@ -11,7 +11,7 @@
 - Using "React Hook Form" for form creation and handling
 - Using Yup for form validation
 - Using React Toastify to show success error warning
-- Searching, sorting and other functionalities are inside the header
+- Searching, sorting and other functionalities are inside the table header
 
 ## Setup
 
@@ -36,14 +36,14 @@ Following instructions will get you a copy of the project up and running on your
     ```
 
 4.  Once your app is running, you can access it on the following address in your browser
-    Json server
-    Resources
-    [http://localhost:3001/categories](http://localhost:3001/categories)
-    [http://localhost:3001/authors](http://localhost:3001/authors)
-    Home
-    [http://localhost:3001](http://localhost:3001)
-    Frontend
-    [http://localhost:3000](http://localhost:3000)
+    - Json server
+    - Resources
+    - [http://localhost:3001/categories](http://localhost:3001/categories)
+    - [http://localhost:3001/authors](http://localhost:3001/authors)
+    - Home
+    - [http://localhost:3001](http://localhost:3001)
+    - Frontend
+    - [http://localhost:3000](http://localhost:3000)
 
 ## Versions
 
