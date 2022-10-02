@@ -13,6 +13,7 @@ import { routeConstantsService } from '../services/routes';
 
 // Interfaces
 import { ProcessedVideo } from '../common/interfaces';
+import { toast } from 'react-toastify';
 
 type VideosTableProps = {
   videos: ProcessedVideo[];
@@ -44,6 +45,7 @@ export const VideosTable = ({ videos, setVideos }: VideosTableProps) => {
       return video.id !== videoId;
     });
     setVideos(updatedList);
+    toast.success('Video Deleted Successfully');
   };
 
   // redirects to edit video

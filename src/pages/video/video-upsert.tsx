@@ -27,6 +27,7 @@ import { Category, Video } from './../../common/interfaces';
 import { routeConstantsService } from '../../services/routes';
 import { getCategoryName } from './../../utils/getCategoryName';
 import { formatDate } from './../../utils/formatDate';
+import { toast } from 'react-toastify';
 
 // MUI Stylings
 const FormParentStyling = {
@@ -174,6 +175,13 @@ export const UpsertVideo = () => {
       };
       // api call
       createVideo(authorObj.id, authorObj);
+
+      // We can move it to the general axios function where we can check on the basis of http code
+      if (id) {
+        toast.success('Video Updated Successfully');
+      } else {
+        toast.success('Video Added Successfully');
+      }
       // navigates to list page
       navigate(routeConstantsService.unAuthenticatedRoutes.videos.path);
     } catch (error) {
