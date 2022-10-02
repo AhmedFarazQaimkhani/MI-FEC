@@ -7,8 +7,7 @@
 - Using "React Material" for UI styling.
 - Linter and Prettier added
 - Using "React Hook Form" for form creation and handling
-- Using Yup for form validation
-- 
+- Using Yup for form validation 
 
 ## Setup
 
@@ -19,14 +18,16 @@ Following instructions will get you a copy of the project up and running on your
 	- [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com))
 2. Clone the repository by running this following command
 	```bash
-	git clone 
+	git clone https://github.com/AhmedFarazQaimkhani/mic-fec.git
 	```
 3. Start project by running following commands
 	```bash
 	yarn install
 		
-	# once node_modules gets install, run next command (this will build your app for production and locally preview production build)
-	yarn preview
+	# once node_modules gets install, run next command it will run the json-server
+	yarn start: json 
+	# after running json-server run frontend
+	yarn start
 	```
 4. Once your app is running, you can access it on the following address in your browser
 	[http://localhost:4173](http://localhost:4173)
