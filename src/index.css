@@ -3,6 +3,8 @@
   --light-gray: #f5f5f5;
   --dark-gray: #333;
   --green: #00ab35;
+  --blue: #44a5de;
+  --red: #c82626;
 }
 
 body {
@@ -16,6 +18,13 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+.error {
+  margin: 0px 30px;
+  color: red;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 #root {

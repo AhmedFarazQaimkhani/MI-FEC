@@ -13,3 +13,7 @@
   border: 1px solid;
   text-align: left;
 }
+
+.spaceBetween {
+  justify-content: space-between;
+}

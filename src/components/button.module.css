@@ -4,8 +4,16 @@
   border-radius: 4px;
   color: var(--white);
   cursor: pointer;
+  margin: 2px;
 }
 
 .primary {
   background: var(--green);
+}
+
+.secondary {
+  background: var(--blue);
+}
+.danger {
+  background: var(--red);
 }

@@ -7,6 +7,8 @@ export interface Video {
   id: number;
   catIds: number[];
   name: string;
+  formats: string[];
+  releaseDate: string;
 }
 
 export interface Author {
@@ -15,9 +17,29 @@ export interface Author {
   videos: Video[];
 }
 
+export interface Format {
+  res: string;
+  size: number;
+}
+
 export interface ProcessedVideo {
   id: number;
   name: string;
-  author: string;
+  author: any;
   categories: string[];
+  releaseDate: string;
+  formats: any;
+}
+
+export interface Item {
+  id?: number;
+  name?: string;
+  videos?: Video[];
+}
+
+export interface HeadCell {
+  disablePadding: boolean;
+  id: any;
+  label: string;
+  numeric: boolean;
 }
