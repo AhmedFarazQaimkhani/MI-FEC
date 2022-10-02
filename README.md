@@ -11,7 +11,7 @@
 - Using "React Hook Form" for form creation and handling
 - Using Yup for form validation
 - Using React Toastify to show success error warning
-- Searching, sorting and other functionalities are inside the header
+- Searching, sorting and other functionalities are inside the table header
 
 ## Setup
 
