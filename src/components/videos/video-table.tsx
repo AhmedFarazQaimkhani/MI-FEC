@@ -104,7 +104,10 @@ export const VideoTable = ({ videos, setVideos }: VideosTableProps) => {
     },
   ];
 
-  // Handle search use to search across all columns. We can make it better using vanilla js approach by using table row and td
+  /**
+   * Handle search use to search across all columns. We can make it better using vanilla js approach by using table row and td.
+   * It can be create as a custom hook
+   */
   const handleSearch = () => {
     let filteredData = videos.filter((value) => {
       return (
@@ -124,7 +127,6 @@ export const VideoTable = ({ videos, setVideos }: VideosTableProps) => {
       <SearchInput setSearchValue={setSearchValue} handleSearch={handleSearch} />
       {/* Custom Table to render videos */}
       <Table data={filteredData.length > 0 ? filteredData : videos} columns={columns} />
-
       {/* Confirm on delete video */}
       <ConfirmationDialog
         isOpen={showConfirmationDialog}

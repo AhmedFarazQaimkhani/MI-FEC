@@ -11,7 +11,7 @@
 - Linter and Prettier added
 - Using "React Hook Form" for form creation and handling
 - Using Yup for form validation
-- Using React Toastify to show success error warning
+- Using React Toastify to show success, error and warning
 
 ## Setup
 
@@ -68,7 +68,7 @@ main -> contains latest changes
 ## Improvements
 
 - Add E2E test cases.
-- Add Unit test cases
+- Add Unit test cases.
 - Add SonarQube to analyze code quality and code security.
 
 ## Features that can be added
