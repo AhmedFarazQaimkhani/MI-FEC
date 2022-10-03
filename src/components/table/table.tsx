@@ -8,7 +8,6 @@ import { TableHead } from './table-head';
 // Interfaces
 import { Column } from '../../common/interfaces';
 
-
 interface TableProps {
   data: any;
   columns: Column[];
@@ -16,6 +15,7 @@ interface TableProps {
 export const Table = ({ data, columns }: TableProps) => {
   // Hooks
   const [tableData, handleSorting] = useSortableTable(data, columns);
+
   return (
     <>
       <table className="table">

@@ -1,13 +1,18 @@
 // Components
+import { Column } from '../../common/interfaces';
 import { getPropByString } from '../../utils/getPropByString';
 
-export const TableBody = ({ tableData, columns }: any) => {
+interface TableBodyProps {
+  tableData: any;
+  columns: Column[];
+}
+export const TableBody = ({ tableData, columns }: TableBodyProps) => {
   return (
     <tbody>
       {tableData.map((data: any) => {
         return (
           <tr key={data.id}>
-            {columns.map(({ accessor, renderCell }: any) => {
+            {columns.map(({ accessor, renderCell }: Column) => {
               const tData = getPropByString(data, accessor);
               return (
                 <td key={accessor}>

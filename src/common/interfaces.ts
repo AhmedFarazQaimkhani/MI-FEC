@@ -1,5 +1,3 @@
-import { boolean } from 'yup';
-
 export interface Category {
   id: number;
   name: string;
