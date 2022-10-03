@@ -1,10 +1,9 @@
 // Packages
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Column } from '../common/interfaces';
 
 // Utils
 import { getPropByString } from '../utils/getPropByString';
-import { useEffect } from 'react';
 
 // Sort data asc as default
 const getDefaultSorting = (defaultTableData: any, columns: Column[]) => {
