@@ -57,7 +57,6 @@ export const getVideos = async (): Promise<ProcessedVideo[]> => {
       videoWithCompleteData.push(eachVideo);
     }
   });
-
   return videoWithCompleteData;
 };
 

@@ -6,12 +6,12 @@
 
 - List video
 - Video can be add, update, edit, delete from application
+- Search and sort videos
 - Using "React Material" for UI styling.
 - Linter and Prettier added
 - Using "React Hook Form" for form creation and handling
 - Using Yup for form validation
 - Using React Toastify to show success error warning
-- Searching, sorting and other functionalities are inside the table header
 
 ## Setup
 

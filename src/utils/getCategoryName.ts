@@ -1,5 +1,5 @@
 import { Category } from '../common/interfaces';
-
+// Gets category name by cat id
 export const getCategoryName = (categories: Category[], catIds: number[], withObject: boolean) => {
   if (categories.length < 1) return [];
 

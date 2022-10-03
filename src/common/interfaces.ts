@@ -1,3 +1,5 @@
+import { boolean } from 'yup';
+
 export interface Category {
   id: number;
   name: string;
@@ -37,9 +39,9 @@ export interface Item {
   videos?: Video[];
 }
 
-export interface HeadCell {
-  disablePadding: boolean;
-  id: any;
-  label: string;
-  numeric: boolean;
+export interface Column {
+  accessor?: string;
+  label?: string;
+  sortable?: boolean;
+  renderCell?: any;
 }

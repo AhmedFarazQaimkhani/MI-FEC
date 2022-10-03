@@ -2,18 +2,17 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
 // Components
-import { ControllerTextField } from '../../components/text-field';
-import { ControllerSelectField } from '../../components/select-field';
-import { ControllerMultiSelectField } from '../../components/multi-select-field';
-import { PageHeader } from './../../components/page-header';
-import { Button } from './../../components/button';
+import { ControllerTextField } from '../../components/form/text-field';
+import { ControllerSelectField } from '../../components/form/select-field';
+import { ControllerMultiSelectField } from '../../components/form/multi-select-field';
+import { PageHeader } from '../../components/pageHeader/page-header';
+import { Button } from '../../components/button/button';
 
 // Services
 import { getCategories } from './../../services/videos/categories';
@@ -116,11 +115,11 @@ export const UpsertVideo = () => {
 
     // filtering videos by video id
     const video: any = (videoById as any).videos.filter((video: Video) => {
-      return video.id === Number(id);
+      return video.id.toString() === id?.toString();
     });
 
     // getting categories with name
-    const categoriesWithName: (string | Category)[] = getCategoryName(categories, video[0].catIds, true);
+    const categoriesWithName: (string | Category)[] = getCategoryName(categories, video[0]?.catIds, true);
 
     // updating keys as per the react select requirement
     const manipulateCategoriesWithName = categoriesWithName.map((category: any) => {
@@ -155,6 +154,8 @@ export const UpsertVideo = () => {
 
   // onSubmit
   const submitHandler = (data: any) => {
+    // Creates a random new no to store new video
+    const randomNum = Math.floor(Date.now() + Math.random());
     try {
       let existingVideos = [];
 
@@ -163,7 +164,7 @@ export const UpsertVideo = () => {
         data.videos.id = Number(id);
         existingVideos = removeExistingVideo(data);
       } else {
-        data.videos.id = uuidv4();
+        data.videos.id = randomNum;
         existingVideos = data.author.videos;
       }
 
@@ -194,6 +195,7 @@ export const UpsertVideo = () => {
     reset();
     navigate(routeConstantsService.unAuthenticatedRoutes.videos.path);
   };
+
   return (
     <Paper sx={FormParentStyling}>
       <PageHeader title={'Add Video'} />

@@ -1,4 +1,7 @@
-import { Button } from './button';
+// Components
+import { Button } from '../button/button';
+
+// Styling
 import styles from './page-header.module.css';
 
 interface PageHeaderInt {
