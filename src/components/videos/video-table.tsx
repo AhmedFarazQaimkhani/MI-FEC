@@ -13,6 +13,7 @@ import { routeConstantsService } from './../../services/routes/constants';
 // Interfaces
 import { Column, ProcessedVideo } from '../../common/interfaces';
 import { ConfirmationDialog } from '../dialog/confirm-dialog';
+import { SearchInput } from '../search/search-input';
 
 type VideosTableProps = {
   videos: ProcessedVideo[];
@@ -22,6 +23,9 @@ type VideosTableProps = {
 export const VideoTable = ({ videos, setVideos }: VideosTableProps) => {
   // Hooks
   const [videoId, setVideoId] = useState<number>(0);
+  const [searchValue, setSearchValue] = useState<string>('');
+  const [filteredData, setFilteredData] = useState<ProcessedVideo[]>([]);
+
   const [showConfirmationDialog, setShowConfirmationDialog] = useState<boolean>(false);
   const navigate = useNavigate();
 
@@ -100,10 +104,26 @@ export const VideoTable = ({ videos, setVideos }: VideosTableProps) => {
     },
   ];
 
+  // Handle search use to search across all columns. We can make it better using vanilla js approach by using table row and td
+  const handleSearch = () => {
+    let filteredData = videos.filter((value) => {
+      return (
+        value.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+        value.author.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+        value.categories.toString().toLowerCase().includes(searchValue.toLowerCase()) ||
+        value.formats.res.toString().toLowerCase().includes(searchValue.toLowerCase()) ||
+        value.releaseDate.toString().toLowerCase().includes(searchValue.toLowerCase())
+      );
+    });
+    setFilteredData(filteredData as any);
+  };
+
   return (
     <>
+      {/* Search Input */}
+      <SearchInput setSearchValue={setSearchValue} handleSearch={handleSearch} />
       {/* Custom Table to render videos */}
-      <Table data={videos} columns={columns} />
+      <Table data={filteredData.length > 0 ? filteredData : videos} columns={columns} />
 
       {/* Confirm on delete video */}
       <ConfirmationDialog

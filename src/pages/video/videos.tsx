@@ -23,7 +23,7 @@ export const Videos = () => {
     getVideos().then(setVideos);
   }, []);
 
-  // redirects to add video page
+  // Redirects to add video page
   const handleAddVideo = () => {
     navigate(routeConstantsService.unAuthenticatedRoutes.createVideo.path);
   };
