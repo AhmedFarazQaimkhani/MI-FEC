@@ -4,6 +4,7 @@ import { Column } from '../common/interfaces';
 
 // Utils
 import { getPropByString } from '../utils/getPropByString';
+import { useEffect } from 'react';
 
 // Sort data asc as default
 const getDefaultSorting = (defaultTableData: any, columns: Column[]) => {
@@ -28,7 +29,12 @@ const getDefaultSorting = (defaultTableData: any, columns: Column[]) => {
 
 // Custom Hook to sort data
 export const useSortableTable = (data: any, columns: Column[]) => {
-  const [tableData, setTableData] = useState(getDefaultSorting(data, columns));
+  const [tableData, setTableData] = useState([]);
+
+  useEffect(() => {
+    const defaultSortData = getDefaultSorting(data, columns);
+    setTableData(defaultSortData as []);
+  }, [data, columns]);
 
   const handleSorting = (sortField: string, sortOrder: string) => {
     if (sortField) {
