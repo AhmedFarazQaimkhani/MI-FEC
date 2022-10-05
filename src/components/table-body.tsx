@@ -1,6 +1,6 @@
 // Components
-import { Column } from '../../common/interfaces';
-import { getPropByString } from '../../utils/getPropByString';
+import { Column } from '../common/interfaces';
+import { getPropByString } from '../utils/getPropByString';
 
 interface TableBodyProps {
   tableData: any;

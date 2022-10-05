@@ -1,5 +1,5 @@
 // Components
-import { Button } from '../button/button';
+import { Button } from './button';
 
 // Styling
 import styles from './page-header.module.css';

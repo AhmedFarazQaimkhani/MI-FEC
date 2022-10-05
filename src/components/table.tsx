@@ -1,12 +1,12 @@
 // Hooks
-import { useSortableTable } from '../../hooks/useSortableHooks';
+import { useSortableTable } from '../hooks/useSortableHooks';
 
 // Components
 import { TableBody } from './table-body';
 import { TableHead } from './table-head';
 
 // Interfaces
-import { Column } from '../../common/interfaces';
+import { Column } from '../common/interfaces';
 
 interface TableProps {
   data: any;

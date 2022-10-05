@@ -2,7 +2,7 @@
 import TextField from '@mui/material/TextField';
 
 // Components
-import { Button } from '../button/button';
+import { Button } from './button';
 
 interface SearchInputProps {
   handleSearch: any;

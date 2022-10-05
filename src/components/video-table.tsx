@@ -4,16 +4,16 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 // Components
-import { Table } from '../../components/table/table';
-import { Button } from '../../components/button/button';
+import { Table } from '../components/table';
+import { Button } from '../components/button';
 
 // Services
-import { routeConstantsService } from './../../services/routes/constants';
+import { routeConstantsService } from '../services/routes/constants';
 
 // Interfaces
-import { Column, ProcessedVideo } from '../../common/interfaces';
-import { ConfirmationDialog } from '../dialog/confirm-dialog';
-import { SearchInput } from '../search/search-input';
+import { Column, ProcessedVideo } from '../common/interfaces';
+import { ConfirmationDialog } from './confirm-dialog';
+import { SearchInput } from './search-input';
 
 type VideosTableProps = {
   videos: ProcessedVideo[];

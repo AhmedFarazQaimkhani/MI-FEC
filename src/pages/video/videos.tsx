@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Components
-import { PageHeader } from '../../components/pageHeader/page-header';
+import { PageHeader } from '../../components/page-header';
 
 // Interfaces
 import { ProcessedVideo } from '../../common/interfaces';
@@ -11,7 +11,7 @@ import { ProcessedVideo } from '../../common/interfaces';
 // Services
 import { getVideos } from '../../services/videos/videos';
 import { routeConstantsService } from './../../services/routes/constants';
-import { VideoTable } from '../../components/videos/video-table';
+import { VideoTable } from '../../components/video-table';
 
 export const Videos = () => {
   // Hooks

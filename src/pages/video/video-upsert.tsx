@@ -8,11 +8,11 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
 // Components
-import { ControllerTextField } from '../../components/form/text-field';
-import { ControllerSelectField } from '../../components/form/select-field';
-import { ControllerMultiSelectField } from '../../components/form/multi-select-field';
-import { PageHeader } from '../../components/pageHeader/page-header';
-import { Button } from '../../components/button/button';
+import { ControllerTextField } from '../../components/text-field';
+import { ControllerSelectField } from '../../components/select-field';
+import { ControllerMultiSelectField } from '../../components/multi-select-field';
+import { PageHeader } from '../../components/page-header';
+import { Button } from '../../components/button';
 
 // Services
 import { getCategories } from './../../services/videos/categories';

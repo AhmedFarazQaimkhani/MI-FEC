@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 // Interfaces
-import { Column } from '../../common/interfaces';
+import { Column } from '../common/interfaces';
 
 interface TableHeadProps {
   columns: Column[];

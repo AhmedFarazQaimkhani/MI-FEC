@@ -1,7 +1,12 @@
+// Packages
 import { getCategories } from './categories';
 import { updateAuthor, getAuthors, getAuthorById } from './authors';
+
+// Interfaces
 import { Format, ProcessedVideo } from '../../common/interfaces';
 import { Author } from './../../common/interfaces';
+
+// Utils
 import { getCategoryName } from './../../utils/getCategoryName';
 
 /**
@@ -60,10 +65,12 @@ export const getVideos = async (): Promise<ProcessedVideo[]> => {
   return videoWithCompleteData;
 };
 
+// Creating new video inside author
 export const createVideo = async (id: number, data: Author) => {
   await updateAuthor(id, data);
 };
 
+// Get video from author by author id
 export const getVideoById = async (id: number) => {
   const author = await getAuthorById(id);
   return author;
